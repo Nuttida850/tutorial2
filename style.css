@@ -27,6 +27,9 @@ body {
   position: relative;
   min-height: 100vh;
 }
+html {
+  scroll-behavior: smooth;
+}
 .dark-theme {
   --primary-clr: #53d1ff;
   --secondary-clr: #7899fd;
@@ -112,6 +115,22 @@ ul {
   right: 5%;
   filter: blur(200px);
 }
+.scroll-down {
+  position: fixed;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-clr);
+  color: var(--background-clr);
+  bottom: 50px;
+  right: 30px;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 1.5rem;
+  z-index: 1000;
+  cursor: pointer;
+}
+
 /* Top Banner */
 .top-banner {
   background: var(--primary-clr);
@@ -291,4 +310,18 @@ ul {
 }
 .services-img img {
   max-width: 100%;
+}
+
+/* Footer */
+footer {
+  background: var(--secondary-clr);
+  padding-block: 0.8rem;
+}
+.footer-con {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.socials {
+  justify-self: flex-end;
+  font-size: 1rem;
 }
